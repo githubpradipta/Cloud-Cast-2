@@ -1,0 +1,162 @@
+:root{
+    --bgcolor:bisque;
+    --baseColor:rgba(255, 255, 255, 0.537);
+    --textPrimary:rgb(21, 21, 21)7e7;
+    --textSecondary: rgb(106, 106, 106);
+    --primaryYellow:rgb(255, 204, 142);
+}
+.homeContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgcolor);
+}
+.searchBar .search{
+    margin: 20px 0px;
+    border: none;
+    outline: none;
+    color: var(--textPrimary);
+    font-weight: 700;
+    padding: 13px 14px;
+    width: 300px;
+    border-radius: 5px;
+}
+.searchBar button{
+    height: 41.33px;
+    outline: none;
+    width: 80px;
+    margin: 0px 20px;
+    font-weight: 500;
+    color: var(--textSecondary);
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--primaryYellow);
+    transition: all .3s ease;
+}
+.searchBar button:hover{
+    cursor: pointer;
+    background-color: var(--primaryYellow);
+    transform: scale(110%);
+    color: white;
+    font-weight: 700;
+}
+.HomeBox{
+    width: 65%;
+    padding: 0px 20px;
+    background-color: var(--baseColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.HomeBox .statusIcon{
+    width: 130px;
+    margin-bottom: 10px;
+}
+.HomeBox .temp{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border:1px solid var(--primaryYellow);
+    border-radius: 10px;
+}
+.HomeBox .temp:hover{
+    cursor: pointer;
+}
+.HomeBox .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.HomeBox .header p{
+    font-size: 24px;
+    font-weight: 500;
+}
+.HomeBox .buttom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px 30px 20px ;
+    
+}
+.HomeBox .temp .temp_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.HomeBox .temp .temp_div span{
+    font-size: 30px;
+}
+.HomeBox .temp .temp_div p{
+    font-size: 10px;
+    font-weight: 500;
+}
+.HomeBox .temp p{
+    margin: 0px 30px;
+    font-size: 20px;
+}
+.HomeBox .temp p span{
+    font-size: 35px;
+    font-weight: 500;
+}
+.HomeBox .feelsLike{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.HomeBox .feelsLike h1{
+    margin: 0;
+    font-size: 44px;
+    
+}
+.HomeBox .feelsLike p{
+    font-size: 13px;
+    margin: 0;
+    margin-top: 3px;
+    color: var(--textSecondary);
+}
+.HomeBox .others{
+    display: flex;
+    width: 80%;
+}
+.HomeBox .others .other_box{
+    background-color: transparent;
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 42px;
+    transition: all 0.3s ease;
+}
+.HomeBox .others .other_box:hover{
+    background-color: var(--primaryYellow);
+    cursor: pointer;
+    transform: scale(105%);
+}
+.HomeBox .others .other_box:hover p{
+    color: var(--textPrimary);
+}
+.HomeBox .others .other_box p{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--textSecondary);
+}
+.HomeBox .others .other_box h1 span{
+    margin: 0;
+    font-size: 20px;
+    color: var(--textPrimary);
+}
+.HomeBox .others .other_box h1{
+    margin: 0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
