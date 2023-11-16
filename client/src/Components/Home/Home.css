@@ -13,6 +13,26 @@
     align-items: center;
     background-color: var(--bgcolor);
 }
+.topHeader{
+    display: flex;
+    align-items: center;
+}
+.searchBar{
+    width: 90%;
+}
+.logout{
+    width: 10%;
+    height: 41.33px;
+    outline: none;
+    width: 80px;
+    margin: 0px 20px;
+    font-weight: 500;
+    color: var(--textSecondary);
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--primaryYellow);
+    transition: all .3s ease;
+}
 .searchBar .search{
     margin: 20px 0px;
     border: none;
@@ -35,7 +55,7 @@
     border: 2px solid var(--primaryYellow);
     transition: all .3s ease;
 }
-.searchBar button:hover{
+.searchBar button:hover,.logout:hover{
     cursor: pointer;
     background-color: var(--primaryYellow);
     transform: scale(110%);

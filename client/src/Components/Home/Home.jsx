@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import swal from 'sweetalert2'
 
@@ -18,6 +19,7 @@ export default function Home() {
     const[statusIcon,setStatusIcon] = useState(null);
     const[place,setPlace] = useState(null)
     const[city,setCity] = useState('')
+    const navigate = useNavigate();
 
     let mainData;
     let data
@@ -160,13 +162,21 @@ export default function Home() {
         setCity(place)
     },[sendPlace])
     
+    const logout = ()=>{
+        navigate('/login')
+    }
     
    
   return (
     <div className='homeContainer'>   
+    <div className="topHeader">
     <div className="searchBar">
     <input type="text" className='search' onChange={getPlace} placeholder='Search with name of any place'/>
     <button className='searchBtn' onClick={sendPlace}>search</button>
+    </div>
+    
+    <button className="logout" onClick={logout}>Logout</button>
+
     </div>
         <div className="HomeBox">
             <div className="header">
