@@ -48,12 +48,21 @@
     font-weight: 600;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all .3s ease;
+}
+.loginBox .loginBtn .arrowIcon{
     transition: all .3s ease;
 }
 .loginBox .loginBtn:hover{
     cursor: pointer;
     background-color: rgb(235, 106, 1);
     transform: scale(105%);
+    border-radius: 5px;
+}
+.loginBox .loginBtn:hover .arrowIcon{
+    transform: translateX(10px);
 }
 .loginBox p{
     color: white;

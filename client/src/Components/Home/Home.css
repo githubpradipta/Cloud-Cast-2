@@ -21,17 +21,25 @@
     width: 90%;
 }
 .logout{
-    width: 10%;
     height: 41.33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     outline: none;
     width: 80px;
     margin: 0px 20px;
+    padding: 0px 50px;
     font-weight: 500;
     color: var(--textSecondary);
     background-color: transparent;
     border-radius: 5px;
     border: 2px solid var(--primaryYellow);
-    transition: all .3s ease;
+    transition: all .3s ease-in-out;
+}
+.logout .LogoutIcon{
+    width: 16px;
+
 }
 .searchBar .search{
     margin: 20px 0px;

@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 import axios from 'axios'
 import swal from 'sweetalert2'
 
@@ -13,6 +13,7 @@ import atm from '../../Assets/Icons/atmospheric-pollution.png';
 import rainy from '../../Assets/Icons/rain.png';
 import clear from '../../Assets/Icons/sun.png';
 import thunder from '../../Assets/Icons/thunderstorm.png';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export default function Home() {
     const[weather,setWeather] = useState({cityName:"",temp_max:"",temp_min:"",feels_like:"",status:"",humidity:"",wind:"",id:""})
@@ -20,11 +21,22 @@ export default function Home() {
     const[place,setPlace] = useState(null)
     const[city,setCity] = useState('')
     const navigate = useNavigate();
+    const Location = useLocation();
+
 
     let mainData;
     let data
+    let checkLogin = false;
+
+    try{
+        checkLogin = Location.state.isLogin;
+    }
+    catch{
+        checkLogin = false;
+    }
     
     useEffect(()=>{
+        if(checkLogin){
         const fetchData = async()=>{
             const result = await swal.fire({
                 title: "Welcome to CloudCast",
@@ -97,7 +109,7 @@ export default function Home() {
             }
         }
         fetchData();
-
+    }
         
     },[])
 
@@ -163,7 +175,7 @@ export default function Home() {
     },[sendPlace])
     
     const logout = ()=>{
-        navigate('/login')
+        navigate('/login',{state:{isLogout:true}})
     }
     
    
@@ -175,7 +187,7 @@ export default function Home() {
     <button className='searchBtn' onClick={sendPlace}>search</button>
     </div>
     
-    <button className="logout" onClick={logout}>Logout</button>
+    <button className="logout" onClick={logout}>Logout <LogoutIcon className='LogoutIcon'/> </button>
 
     </div>
         <div className="HomeBox">
