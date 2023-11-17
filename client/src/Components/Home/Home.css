@@ -5,11 +5,16 @@
     --textSecondary: rgb(106, 106, 106);
     --primaryYellow:rgb(255, 204, 142);
 }
+.homeContainer .spinner{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
 .homeContainer{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--bgcolor);
 }

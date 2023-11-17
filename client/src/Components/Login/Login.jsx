@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
 import { useNavigate,useLocation } from 'react-router-dom';
@@ -12,21 +12,22 @@ export default function Login() {
     const navigate = useNavigate()
     const location = useLocation()
     let check = false;
-    try{
-        check = location.state.isLogout
-    }
-    catch{
-        check = false
-    }
     
-
-    if(check){
-        swal.fire({
-            icon: "success",
-            title: "You are successfully logged out",
-            timer: 2000
-          });
-    }
+    useEffect(()=>{
+        try{
+            check = location.state.isLogout
+        }
+        catch{
+            check = false
+        }
+        if(check){
+            swal.fire({
+                icon: "success",
+                title: "You are successfully logged out",
+                timer: 2000
+              });
+        }
+    },[])
 
     let name,value;
     const setValues = (e)=>{

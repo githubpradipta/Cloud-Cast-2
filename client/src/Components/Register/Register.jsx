@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import swal from 'sweetalert2';
+import ArrowIcon from '@mui/icons-material/ArrowForward';
+
 export default function Register() {
   const [registerData,setRegisterData] = useState({name:"",username:"",password:"",cpassword:""});
   const navigate = useNavigate();
@@ -47,6 +49,7 @@ export default function Register() {
             </div>
             <button className='loginBtn' onClick={registerSubmit}>
                 Register
+                <ArrowIcon className='arrowIcon'/>
             </button>
             <p>If you already have an account then <Link to='/login'>Login</Link></p>
         </div>
